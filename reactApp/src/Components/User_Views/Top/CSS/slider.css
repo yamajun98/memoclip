@@ -1,0 +1,40 @@
+.swiper-button-prev,
+.swiper-button-next {
+    width: 80px;
+    color:#ffffff;
+   
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+color: #000;
+}
+.swiper-button-prev {
+ margin-left: 4%;
+ padding-left: 4%;
+}
+.swiper-button-next {
+    margin-right: 4%;
+    padding-right: 4%;
+}
+
+.swiper-button-prev:hover {
+    /* margin-left: 4%; */
+    /* width: 70px; */
+    transition: 0.2s all;
+    padding-left: 0%;
+}
+
+.swiper-button-next:hover {
+    /* margin-right: 4%; */
+    /* width: 70px; */
+    transition: 0.2s all;
+    padding-right: 0%;
+}
+.swiper-pagination-bullet{
+  width: 6%;
+  height: 4px;  
+  border-radius: 0%;
+  background-color: rgb(255, 255, 255);
+}

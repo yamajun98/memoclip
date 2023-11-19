@@ -1,0 +1,56 @@
+version: '3.9'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./reactApp:/usr/src/app/ # ローカルをコンテナ内にマウント
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3001:3000"
+    stdin_open: true 
+    networks:
+      - react_express
+
+  backend:  # Express用のコンテナ
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: back
+    tty: true
+    volumes:
+      - ./backendApp:/backend
+    working_dir: "/backend"
+    ports:
+      - 3002:3000
+    networks:
+      - react_express
+    command: sh -c "npm install && npm run start"
+    depends_on:
+      - db
+
+  db:
+    platform: linux/x86_64 
+    container_name: db_2
+    build:
+      dockerfile: ./mysql/Dockerfile
+      context: .
+    ports:
+      - 3330:3306
+    volumes:
+      - type: volume
+        source: React_Dev2-db-data1
+        target: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: root2
+      MYSQL_PASSWORD: password1
+      MYSQL_DATABASE: memo
+    networks:
+      - react_express
+networks:
+  react_express:
+volumes:
+  React_Dev2-db-data1:

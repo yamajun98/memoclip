@@ -1,0 +1,305 @@
+.btnripple{
+    /*波紋の基点とするためrelativeを指定*/
+  position: absolute;
+    /*波紋の形状*/
+  display:inline-block;
+  /* background:#333; */
+  top:0%;
+  left: 0%;
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  color:#ccc;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+/*波形を2つ設定*/
+.btnripple::after{
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 1px solid #333;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 0.9;
+    /*ループするアニメーションの設定*/
+    animation:1.5s circleanime linear infinite;
+}
+
+.btnripple::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 1px solid #333;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity:0.9;
+    /*ループするアニメーションの設定*/
+    animation:1.5s circleanime linear infinite;
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+    0%{
+      transform: scale(0.2);
+    }
+    100%{
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+
+  .btnripple2{
+    /*波紋の基点とするためrelativeを指定*/
+  position: absolute;
+    /*波紋の形状*/
+  display:inline-block;
+  /* background:#333; */
+  top:4%;
+  left: 89%;
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  color:#ccc;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+/*波形を2つ設定*/
+.btnripple2::after{
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -27%;
+    top: 50%;
+    /*波形の形状*/
+    border: 1px solid #333;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 0.9;
+    /*ループするアニメーションの設定*/
+    animation:1.5s circleanime linear infinite;
+}
+
+.btnripple2::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 1px solid #333;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity:0.9;
+    /*ループするアニメーションの設定*/
+    animation:1.5s circleanime linear infinite;
+}
+
+
+
+.btnripple3{
+    /*波紋の基点とするためrelativeを指定*/
+  position: absolute;
+    /*波紋の形状*/
+  display:inline-block;
+  /* background:#333; */
+  top:14%;
+  left: 22%;
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  color:#ccc;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+/*波形を2つ設定*/
+.btnripple3::after{
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -27%;
+    top: 50%;
+    /*波形の形状*/
+    border: 1px solid #333;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 0.9;
+    /*ループするアニメーションの設定*/
+    animation:1.5s circleanime linear infinite;
+}
+
+.btnripple3::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 1px solid #333;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity:0.9;
+    /*ループするアニメーションの設定*/
+    animation:1.5s circleanime linear infinite;
+}
+
+@media(max-width: 1600px){
+    .btnripple3{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:12%;
+      left: 22%;
+      width:90px;
+      height:90px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+}
+@media(max-width: 1200px){
+    .btnripple3{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:7%;
+      left: 22%;
+      width:80px;
+      height:80px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+}
+@media(max-width: 1200px){
+    
+    .btnripple{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:0%;
+      left: 0%;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+    .btnripple2{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:4%;
+      left: 89%;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+    .btnripple3{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:7%;
+      left: 22%;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+}
+
+@media(max-width: 500px){
+    .btnripple{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:0%;
+      left: 0%;
+      width:30px;
+      height:30px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+    .btnripple2{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:2%;
+      left: 89%;
+      width:40px;
+      height:40px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+    .btnripple3{
+        /*波紋の基点とするためrelativeを指定*/
+      position: absolute;
+        /*波紋の形状*/
+      display:inline-block;
+      /* background:#333; */
+      top:4%;
+      left: 22%;
+      width:30px;
+      height:30px;
+      border-radius: 50%;
+      color:#ccc;
+        outline: none;
+        /*アニメーションの設定*/
+        transition: all .3s;
+    }
+}
