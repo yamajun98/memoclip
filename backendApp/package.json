@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1500.0",
     "cookie-parser": "~1.4.4",
     "express": "^4.18.2",
     "express-generator": "^4.16.1",
