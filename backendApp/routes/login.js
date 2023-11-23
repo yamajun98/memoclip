@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models/index.js');
 
-
 /*
 ログイン機能
 */
@@ -12,6 +11,7 @@ router.post('/', function(req, res, next) {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
+  
   db.User.findOne({
     where: {
          userId: req.body.userId,
@@ -30,6 +30,7 @@ router.post('/', function(req, res, next) {
   }).catch((err) => {
     res.sendStatus(500);
   });
+
 });
 
 module.exports = router;
