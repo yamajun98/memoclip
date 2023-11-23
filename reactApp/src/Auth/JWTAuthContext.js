@@ -145,6 +145,7 @@ export const AuthProvider = ({ children }) => {
     //ログイン→セッションに格納
     const login = async (data) => {
         const result = await api.post('/login', new URLSearchParams(data))
+        console.log('login')
         console.log(result)
         const { accessToken, user } = result.data
         if(accessToken == 0){
